@@ -113,6 +113,31 @@ module.exports = {
         youtubeButton: 'var(--youtube-button)',
         youtubeBgAction: 'var(--youtube-action-color)',
         youtubeSvg: 'var(--youtube-svg-border)',
+
+        // Brand palette
+        cream: {
+          DEFAULT: '#F5F0E8',
+          50: '#FDFCFA',
+          100: '#F5F0E8',
+          200: '#EBE1D1',
+          300: '#DDD0BA',
+        },
+        navy: {
+          DEFAULT: '#0F1B2D',
+          50: '#1A2D47',
+          100: '#152338',
+          200: '#0F1B2D',
+          300: '#091422',
+          400: '#050D17',
+        },
+        terracotta: {
+          DEFAULT: '#C4623A',
+          50: '#F0C4B0',
+          100: '#E09070',
+          200: '#C4623A',
+          300: '#A34D2A',
+          400: '#7D3A1E',
+        },
       },
       gridTemplateColumns: {
         13: 'repeat(13, minmax(0, 1fr));',

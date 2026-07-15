@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Postiz - Agent',
-  description: '',
+  title: 'Postique - Agent',
+  description: 'AI-powered social media scheduling — let your Postique agent create and publish posts for you.',
 };
 
 export default async function Page() {

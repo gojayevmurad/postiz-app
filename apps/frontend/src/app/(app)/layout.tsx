@@ -1,6 +1,31 @@
 import { SentryComponent } from '@gitroom/frontend/components/layout/sentry.component';
+import { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.FRONTEND_URL || 'http://localhost:4200'),
+  title: {
+    default: 'Postique — Social Media Scheduling',
+    template: '%s · Postique',
+  },
+  description:
+    'Schedule, publish, and analyze your social media posts across 28+ channels from one place.',
+  openGraph: {
+    type: 'website',
+    siteName: 'Postique',
+    title: 'Postique — Social Media Scheduling',
+    description:
+      'Schedule, publish, and analyze your social media posts across 28+ channels from one place.',
+    images: [{ url: '/logo.svg', width: 160, height: 44, alt: 'Postique' }],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Postique — Social Media Scheduling',
+    description:
+      'Schedule, publish, and analyze your social media posts across 28+ channels from one place.',
+  },
+};
 import '../global.scss';
 import 'react-tooltip/dist/react-tooltip.css';
 import '@copilotkit/react-ui/styles.css';
@@ -40,7 +65,26 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <title>Postique — Social Media Scheduling</title>
+        <meta name="description" content="Schedule, publish, and analyze your social media posts across 28+ channels from one place." />
+        <meta name="theme-color" content="#0F1B2D" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Postique — Social Media Scheduling" />
+        <meta property="og:description" content="Schedule, publish, and analyze your social media posts across 28+ channels from one place." />
+        <meta property="og:image" content="/logo.svg" />
+
+        {/* Twitter / X */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Postique — Social Media Scheduling" />
+        <meta name="twitter:description" content="Schedule, publish, and analyze your social media posts across 28+ channels from one place." />
+
         {!!process.env.DATAFAST_WEBSITE_ID && (
           <Script
             data-website-id={process.env.DATAFAST_WEBSITE_ID}

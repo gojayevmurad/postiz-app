@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
 
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Admin Errors`,
-  description: '',
+  title: `${isGeneralServerSide() ? 'Postique' : 'Gitroom'} Admin Errors`,
+  description: 'Error log and diagnostics.',
 };
 
 export default async function Page() {

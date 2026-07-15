@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { getT } from '@gitroom/react/translation/get.translation.service.backend';
 import { LoginWithOidc } from '@gitroom/frontend/components/auth/login.with.oidc';
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Register`,
-  description: '',
+  title: `${isGeneralServerSide() ? 'Postique' : 'Gitroom'} · Register`,
+  description: 'Create your Postique account and start scheduling posts across 28+ social media channels.',
 };
 export default async function Auth(params: {searchParams: Promise<{provider: string}>}) {
   const t = await getT();

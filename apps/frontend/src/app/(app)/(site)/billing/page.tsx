@@ -3,8 +3,8 @@ import { BillingComponent } from '@gitroom/frontend/components/billing/billing.c
 import { Metadata } from 'next';
 import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Billing`,
-  description: '',
+  title: `${isGeneralServerSide() ? 'Postique' : 'Gitroom'} Billing`,
+  description: 'Manage your Postique subscription, billing details, and plan.',
 };
 export default async function Page() {
   return (

@@ -3,8 +3,8 @@ export const dynamic = 'force-dynamic';
 import { Metadata } from 'next';
 import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Settings`,
-  description: '',
+  title: `${isGeneralServerSide() ? 'Postique' : 'Gitroom'} Settings`,
+  description: 'Manage your Postique account settings, integrations, and preferences.',
 };
 export default async function Index(props: {
   searchParams: Promise<{
